@@ -1,0 +1,32 @@
+
+public class TreeNode<T extends Comparable<T>>{
+	T element;
+	TreeNode<T> left;
+	TreeNode<T> right;
+	
+	public TreeNode(T o) {
+		// TODO Auto-generated constructor stub
+		this.element = o;
+		this.left = null;
+		this.right = null;
+	}
+
+	public TreeNode() {
+		// TODO Auto-generated constructor stub
+		this.element = null;
+		this.left = null;
+		this.right = null;
+	}
+	
+	public void addNode(T element) {
+		if (this == null) {
+			this = new TreeNode<T>(element);
+		} else if (this.element.compareTo(element) < 0) {
+			this.right.addNode(element);
+		} else {
+			this.left.addNode(element);
+		}
+	}
+}
+
+

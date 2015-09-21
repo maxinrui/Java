@@ -1,0 +1,18 @@
+
+public class Solution {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BinaryTree<Integer> tree = new BinaryTree<Integer>(5);
+		TreeNode<Integer> root = tree.root;
+		
+		addNode(root, 2);
+		addNode(root, 3);
+		addNode(root, 4);
+		addNode(root, 7);
+		addNode(root, 6);
+		
+		tree.inOrder(root);
+	}
+
+}

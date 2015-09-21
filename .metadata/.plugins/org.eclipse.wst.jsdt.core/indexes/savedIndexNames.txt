@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+/Users/xma/Documents/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2326864188.index
+1993042143.index
+1563958649.index
+11245670.index
+1630091651.index
+2377425892.index

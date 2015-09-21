@@ -1,0 +1,55 @@
+
+public class BinaryTree<T extends Comparable<T>> {
+	TreeNode<T> root;
+	
+	public BinaryTree() {
+		super();
+		this.root = null;
+	}
+
+	public BinaryTree(TreeNode<T> root) {
+		super();
+		this.root = root;
+	}
+
+	public void addNode(TreeNode<T> node, T element) {
+		if (node == null) {
+			node = new TreeNode<T>(element);
+		} else if (node.element.compareTo(element) < 0) {
+			addNode(node.right, element);
+		} else {
+			addNode(node.left, element);
+		}
+	}
+	
+	public boolean isMember (TreeNode<T> node, T o) {
+		if(node == null) return false;
+		
+		if (node.element.compareTo(o) == 0) {
+			return true;
+		} else if (node.element.compareTo(o) < 0) {
+			isMember(node.right, o);
+		} else {
+			isMember(node.left, o);
+		}
+		return false;
+	}
+	
+	public void preOrder (TreeNode<T> node) {
+		System.out.print(node.element + " ");
+		preOrder(node.left);
+		preOrder(node.right);
+	}
+	
+	public void inOrder(TreeNode<T> node) {
+		inOrder(node.left);
+		System.out.print(node.element + " ");
+		inOrder(node.right);
+	}
+	
+	public void postOrder(TreeNode<T> node) {
+		postOrder(node.left);
+		postOrder(node.right);
+		System.out.print(node.element + " ");
+	}
+}
