@@ -35,7 +35,27 @@ public class TreeNode<T extends Comparable<T>>{
 	}
 	
 	public void visit() {
-		System.out.print(this.element + " ");
+		if (this != null) {
+			System.out.print(this.element + " ");
+		}
+	}
+	
+	public void preOrderHelper () {
+		this.visit();
+		this.left.preOrderHelper();
+		this.right.preOrderHelper();
+	}
+	
+	public void inOrderHelper() {
+		this.left.inOrderHelper();
+		this.visit();
+		this.right.inOrderHelper();
+	}
+	
+	public void postOrderHelper() {
+		this.left.postOrderHelper();
+		this.right.postOrderHelper();
+		this.visit();
 	}
 }
 

@@ -35,7 +35,9 @@ public class TreeNode<T extends Comparable<T>>{
 	}
 	
 	public void visit() {
-		System.out.print(this.element + " ");
+		if (this != null) {
+			System.out.print(this.element + " ");
+		}
 	}
 }
 

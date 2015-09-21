@@ -10,9 +10,7 @@ public class Solution {
 		tree.add(7);
 		
 		tree.inOrder();
-		System.out.println();
 		tree.preOrder();
-		System.out.println();
 		tree.postOrder();
 	}
 
